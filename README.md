@@ -1,3 +1,4 @@
 # streaming-ND
 
-- DOCKER , POSTGREQL 
+- DOCKER , FILE IMG
+- BDD POSTGREQL 
