@@ -21,6 +21,9 @@ Deadline
 Correction entre pairs.
 Vos requêtes seront testées en local après l'importation de votre environnemnt docker.
 
+# Mise en place 
+
+J'ai crée un container docker ou j'ai relier une image ( postgres ) obtenu sur docker hub  qui contient ma conception de ma base de donnés streaming. Pour l'analyse et la rélexion de ma BDD je me suis aidez du logiciel Looping pour crée mon MCD , MLD. Pour remplir ma database j'ai utilisez un mock qui me fournissez des datas toute config en lui passant mes informations.
 
 # Commandes SQL
 
