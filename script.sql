@@ -76,15 +76,15 @@ CREATE TABLE role(
 );
 /*   actors  */
 insert into actors (id_actors, first_name, last_name, role)
-values (1, 'Johannes', 'Besset', 'Electrician');
+values (1, 'Johannes', 'Besset', 'actor');
 insert into actors (id_actors, first_name, last_name, role)
-values (2, 'Ad', 'Makin', 'Supervisor');
+values (2, 'Ad', 'Makin', 'actor');
 insert into actors (id_actors, first_name, last_name, role)
-values (3, 'Zorana', 'Setterington', 'Subcontractor');
+values (3, 'Zorana', 'Setterington', 'superviseur');
 insert into actors (id_actors, first_name, last_name, role)
 values (4, 'Forrest', 'Shera', 'Construction Expeditor');
 insert into actors (id_actors, first_name, last_name, role)
-values (5, 'Christoph', 'Sleicht', 'Electrician');
+values (5, 'Christoph', 'Sleicht', 'actor');
 /*   movies  */
 insert into movies (id_movies, title, release_date, description)
 values (
