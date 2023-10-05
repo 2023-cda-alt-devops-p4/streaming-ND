@@ -187,3 +187,4 @@ insert into favorite (id_movies, iD_users, id_archives)
 values (4, 4, 4);
 insert into favorite (id_movies, iD_users, id_archives)
 values (5, 5, 5);
+Create TRIGGER
