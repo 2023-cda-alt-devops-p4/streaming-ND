@@ -35,11 +35,15 @@ ORDER BY release_date DESC
 
 ajouter un film:
 
-INSERT INTO movies (id, title, length, releaseDate) VALUES (5,'Nouveau film', '2023-10-05');
+INSERT INTO movies ( title, length, releaseDate) VALUES ('Nouveau film', '2023-10-05');
 
 
 ajouter un actors:
 
 INSERT INTO actors (first_name, last_name, role) VALUES ('Nouvel', 'Acteur', 'actors');
+
+Supprimer un actors 
+DELETE FROM actors
+WHERE first_name = 'Jason' AND  last_name= 'STATAM';
 
 

@@ -1,86 +1,82 @@
+CREATE TABLE movies(
+   id_movies SERIAL,
+   title VARCHAR(50) NOT NULL,
+   release_date DATE NOT NULL,
+   description VARCHAR(150) NOT NULL,
+   PRIMARY KEY(id_movies)
+);
 CREATE TABLE actors(
-   id_actors INT,
+   id_actors SERIAL,
    first_name VARCHAR(50) NOT NULL,
    last_name VARCHAR(50) NOT NULL,
    role VARCHAR(30),
+   birthday DATE NOT NULL,
    PRIMARY KEY(id_actors)
 );
 CREATE TABLE movies(
-   id_movies COUNTER,
+   id_movies SERIAL,
    title VARCHAR(50) NOT NULL,
    release_date DATE NOT NULL,
    description VARCHAR(150) NOT NULL,
    PRIMARY KEY(id_movies)
 );
 CREATE TABLE realisator(
-   id_realisator COUNTER,
+   id_realisator SERIAL,
    first_name VARCHAR(50),
    last_name VARCHAR(50),
    role VARCHAR(30),
    PRIMARY KEY(id_realisator)
 );
-CREATE TABLE users(
-   id_users COUNTER,
-   first_name VARCHAR(35) NOT NULL,
-   last_name VARCHAR(40) NOT NULL,
-   password TEXT NOT NULL,
-   role VARCHAR(50) NOT NULL,
-   PRIMARY KEY(id_users)
-);
-CREATE TABLE roles(
-   id_roles COUNTER,
-   role VARCHAR(30),
-   PRIMARY KEY(id_roles)
-);
-CREATE TABLE favoris(
-   id_favoris COUNTER,
-   PRIMARY KEY(id_favoris)
-);
 CREATE TABLE archives(
-   id_archives VARCHAR(50),
+   id_archives SERIAL,
    last_date DATE NOT NULL,
    new_date DATE NOT NULL,
    PRIMARY KEY(id_archives)
 );
+CREATE TABLE role(
+   id_roles SERIAL,
+   role VARCHAR(50),
+   PRIMARY KEY(id_roles)
+);
+CREATE TABLE users(
+   Id_users SERIAL,
+   first_name VARCHAR(35) NOT NULL,
+   last_name VARCHAR(40) NOT NULL,
+   password VARCHAR(50) NOT NULL,
+   id_roles INTEGER NOT NULL,
+   PRIMARY KEY(Id_users),
+   FOREIGN KEY(id_roles) REFERENCES role(id_roles)
+);
 CREATE TABLE favorite(
-   id_movies INT,
-   id_users INT,
-   id_favoris INT,
-   id_archives VARCHAR(50),
-   PRIMARY KEY(id_movies, id_users, id_favoris, id_archives),
+   id_movies INTEGER,
+   Id_users INTEGER,
+   id_archives INTEGER,
+   PRIMARY KEY(id_movies, Id_users, id_archives),
    FOREIGN KEY(id_movies) REFERENCES movies(id_movies),
-   FOREIGN KEY(id_users) REFERENCES users(id_users),
-   FOREIGN KEY(id_favoris) REFERENCES favoris(id_favoris),
+   FOREIGN KEY(Id_users) REFERENCES users(Id_users),
    FOREIGN KEY(id_archives) REFERENCES archives(id_archives)
 );
 CREATE TABLE play(
-   id_actors INT,
-   id_movies INT,
+   id_actors INTEGER,
+   id_movies INTEGER,
    PRIMARY KEY(id_actors, id_movies),
    FOREIGN KEY(id_actors) REFERENCES actors(id_actors),
    FOREIGN KEY(id_movies) REFERENCES movies(id_movies)
 );
 CREATE TABLE making(
-   id_movies INT,
-   id_realisator INT,
+   id_movies INTEGER,
+   id_realisator INTEGER,
    PRIMARY KEY(id_movies, id_realisator),
    FOREIGN KEY(id_movies) REFERENCES movies(id_movies),
    FOREIGN KEY(id_realisator) REFERENCES realisator(id_realisator)
 );
-CREATE TABLE role(
-   id_users INT,
-   id_roles INT,
-   PRIMARY KEY(id_users, id_roles),
-   FOREIGN KEY(id_users) REFERENCES users(id_users),
-   FOREIGN KEY(id_roles) REFERENCES roles(id_roles)
-);
 /*   actors  */
 insert into actors (first_name, last_name, role)
 values ('Johannes', 'Besset', 'actor');
-insert into actors (id_actors, first_name, last_name, role)
-values ('Ad', 'Makin', 'actor');
-insert into actors (id_actors, first_name, last_name, role)
-values ('Zorana', 'Setterington', 'superviseur');
+insert into actors (first_name, last_name, role)
+values ('JASON', 'STATAM', 'actor');
+insert into actors (first_name, last_name, role)
+values ('', 'Setterington', 'superviseur');
 insert into actors (first_name, last_name, role)
 values (
       'Forrest',
