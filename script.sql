@@ -75,85 +75,89 @@ CREATE TABLE role(
    FOREIGN KEY(id_roles) REFERENCES roles(id_roles)
 );
 /*   actors  */
+insert into actors (first_name, last_name, role)
+values ('Johannes', 'Besset', 'actor');
 insert into actors (id_actors, first_name, last_name, role)
-values (1, 'Johannes', 'Besset', 'actor');
+values ('Ad', 'Makin', 'actor');
 insert into actors (id_actors, first_name, last_name, role)
-values (2, 'Ad', 'Makin', 'actor');
-insert into actors (id_actors, first_name, last_name, role)
-values (3, 'Zorana', 'Setterington', 'superviseur');
-insert into actors (id_actors, first_name, last_name, role)
-values (4, 'Forrest', 'Shera', 'Construction Expeditor');
-insert into actors (id_actors, first_name, last_name, role)
-values (5, 'Christoph', 'Sleicht', 'actor');
+values ('Zorana', 'Setterington', 'superviseur');
+insert into actors (first_name, last_name, role)
+values (
+      'Forrest',
+      'Shera',
+      'mannequin'
+   );
+insert into actors (first_name, last_name, role)
+values ('Christoph', 'Sleicht', 'actor');
 /*   movies  */
-insert into movies (id_movies, title, release_date, description)
-values (
-      1,
-      'Help Desk Operator',
-      '2/26/2023',
-      'Occlusion of Right Femoral Vein with Intraluminal Device, Percutaneous Approach'
+INSERT INTO Movies (id, nom_du_film, date_de_sortie, description)
+VALUES (
+      Le Seigneur des Anneaux: La Communauté de l ' Anneau ',
+      ' 2001 -12 -19 ',
+      ' Un film épique de fantasy basé sur le roman de J.R.R.Tolkien.'
    );
-insert into movies (id_movies, title, release_date, description)
-values (
-      2,
-      'Research Assistant IV',
-      '8/16/2023',
-      'Dilation of Left Foot Artery, Bifurcation, with Drug-eluting Intraluminal Device, Percutaneous Approach'
+INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+VALUES (
+      ' Forrest Gump ',
+      ' 1994 -07 -06 ',
+      ' L ' histoire extraordinaire d ' un homme simple avec un cœur pur.'
    );
-insert into movies (id_movies, title, release_date, description)
-values (
-      3,
-      'VP Marketing',
-      '6/12/2023',
-      'Extirpation of Matter from Right Upper Extremity Lymphatic, Percutaneous Endoscopic Approach'
+INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+VALUES (
+      ' Inception ',
+      ' 2010 -07 -16 ',
+      ' Un film de science - fiction réalisé par Christopher Nolan qui explore la manipulation des rêves.'
    );
-insert into movies (id_movies, title, release_date, description)
-values (
-      4,
-      'Associate Professor',
-      '7/25/2023',
-      'Planar Nuclear Medicine Imaging of Heart using Other Radionuclide'
+INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+VALUES (
+      ' La La Land ',
+      ' 2016 -12 -25 ',
+      ' Une comédie musicale romantique mettant en vedette Ryan Gosling et Emma Stone.'
    );
-insert into movies (id_movies, title, release_date, description)
-values (
-      5,
-      'Web Designer III',
-      '5/2/2023',
-      'Removal of Nonautologous Tissue Substitute from Right Pelvic Bone, Open Approach'
+INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+VALUES (
+      ' Pulp Fiction ',
+      ' 1994 -09 -23 ',
+      ' Un film culte de Quentin Tarantino avec une narration non linéaire et des personnages mémorables.'
    );
 /*   realisator  */
 insert into realisator (id_realisator, first_name, last_name, role)
-values (1, 'Chaddy', 'Chaffey', 'Surveyor');
+values (1, ' Chaddy ', ' Chaffey ', ' Surveyor ');
 insert into realisator (id_realisator, first_name, last_name, role)
-values (2, 'Alejandro', 'Warren', 'Surveyor');
+values (2, ' Alejandro ', ' Warren ', ' Surveyor ');
 insert into realisator (id_realisator, first_name, last_name, role)
-values (3, 'Sarina', 'Peaddie', 'Construction Worker');
+values (
+      3,
+      ' Sarina ',
+      ' Peaddie ',
+      ' Construction Worker '
+   );
 insert into realisator (id_realisator, first_name, last_name, role)
-values (4, 'Corbett', 'Barkus', 'Architect');
+values (4, ' Corbett ', ' Barkus ', ' Architect ');
 insert into realisator (id_realisator, first_name, last_name, role)
-values (5, 'Sher', 'Signori', 'Supervisor');
+values (5, ' Sher ', ' Signori ', ' Supervisor ');
 /*   archives  */
 insert into archives (id_archives, last_date, new_date)
-values (1, '12/30/2022', '4/19/2023');
+values (1, ' 12 / 30 / 2022 ', ' 4 / 19 / 2023 ');
 insert into archives (id_archives, last_date, new_date)
-values (2, '12/28/2022', '4/14/2023');
+values (2, ' 12 / 28 / 2022 ', ' 4 / 14 / 2023 ');
 insert into archives (id_archives, last_date, new_date)
-values (3, '11/10/2022', '6/30/2023');
+values (3, ' 11 / 10 / 2022 ', ' 6 / 30 / 2023 ');
 insert into archives (id_archives, last_date, new_date)
-values (4, '6/7/2023', '1/26/2023');
+values (4, ' 6 / 7 / 2023 ', ' 1 / 26 / 2023 ');
 insert into archives (id_archives, last_date, new_date)
-values (5, '7/27/2023', '2/14/2023');
+values (5, ' 7 / 27 / 2023 ', ' 2 / 14 / 2023 ');
 /*   role  */
 insert into role (id_archives, role)
-values (1, 'admin');
+values (1, ' admin ');
 insert into role (id_archives, role)
-values (2, 'Construction Worker');
+values (2, ' Construction Worker ');
 insert into role (id_archives, role)
-values (3, 'Construction Worker');
+values (3, ' Construction Worker ');
 insert into role (id_archives, role)
-values (4, 'Engineer');
+values (4, ' Engineer ');
 insert into role (id_archives, role)
-values (5, 'admin');
+values (5, ' admin ');
 /*   play  */
 insert into play (id_actors, id_movies)
 values (1, 1);
@@ -187,4 +191,3 @@ insert into favorite (id_movies, iD_users, id_archives)
 values (4, 4, 4);
 insert into favorite (id_movies, iD_users, id_archives)
 values (5, 5, 5);
-Create TRIGGER
