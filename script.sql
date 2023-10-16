@@ -88,7 +88,7 @@ values ('Christoph', 'Sleicht', 'actor', '1998, 03,19');
 /* movies */
 INSERT INTO movies (id, title, release_date, description)
 VALUES (
-      'Le Seigneur des Anneaux: La Communauté de lAnneau ',
+      'Le Seigneur des Anneaux: La Communauté de lAnneau',
       '2001,12,19',
       'Un film épique de fantasy basé sur le roman de J.R.R.Tolkien.'
    );

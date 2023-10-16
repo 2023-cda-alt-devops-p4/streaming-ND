@@ -27,16 +27,16 @@ J'ai crée un container docker ou j'ai relier une image ( postgres ) obtenu sur 
 
 # Commandes SQL
 
-les titres et dates de sortie des films du plus récent au plus ancien
+les titres et dates de sortie des films du plus récent au plus ancien : 
 
 SELECT title, release_date
 FROM movies
 ORDER BY release_date DESC
 
-ajouter un film:
+
+# Ajouter un film:
 
 INSERT INTO movies ( title, length, releaseDate) VALUES ('Nouveau film', '2023-10-05');
-
 
 Afficher les 3 derniers acteurs/actrices ajouté(e)s
 
@@ -45,12 +45,24 @@ FROM actors
 ORDER BY id_actors DESC
 LIMIT 3;
 
-ajouter un actors:
+#Ajouter un actors:
 
 INSERT INTO actors (first_name, last_name, role) VALUES ('Nouvel', 'Acteur', 'actors');
 
-Supprimer un actors 
+# Supprimer un actors 
 DELETE FROM actors
 WHERE first_name = 'Jason' AND  last_name= 'STATAM';
 
+# trigger archives 
+CREATE TRIGGER Archive_Favoris_Movies ON movies
+AFTER
+SELECT movies_id,
+   title,
+   release_date
+FROM movies
+WHERE movie_id = NEW.movie_id;
+UPDATE movies
+SET favorite = 1
+WHERE title = 'The Shawshank Redemption';
+END;
 
