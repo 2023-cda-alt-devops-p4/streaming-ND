@@ -1,10 +1,3 @@
-CREATE TABLE movies(
-   id_movies SERIAL,
-   title VARCHAR(50) NOT NULL,
-   release_date DATE NOT NULL,
-   description VARCHAR(150) NOT NULL,
-   PRIMARY KEY(id_movies)
-);
 CREATE TABLE actors(
    id_actors SERIAL,
    first_name VARCHAR(50) NOT NULL,
