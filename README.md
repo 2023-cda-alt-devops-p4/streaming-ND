@@ -38,6 +38,13 @@ ajouter un film:
 INSERT INTO movies ( title, length, releaseDate) VALUES ('Nouveau film', '2023-10-05');
 
 
+Afficher les 3 derniers acteurs/actrices ajouté(e)s
+
+SELECT first_name, last_name,
+FROM actors
+ORDER BY id_actors DESC
+LIMIT 3;
+
 ajouter un actors:
 
 INSERT INTO actors (first_name, last_name, role) VALUES ('Nouvel', 'Acteur', 'actors');
