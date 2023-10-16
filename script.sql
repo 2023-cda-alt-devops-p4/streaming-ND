@@ -70,120 +70,120 @@ CREATE TABLE making(
    FOREIGN KEY(id_movies) REFERENCES movies(id_movies),
    FOREIGN KEY(id_realisator) REFERENCES realisator(id_realisator)
 );
-/*   actors  */
-insert into actors (first_name, last_name, role)
-values ('Johannes', 'Besset', 'actor');
-insert into actors (first_name, last_name, role)
-values ('JASON', 'STATAM', 'actor');
-insert into actors (first_name, last_name, role)
-values ('', 'Setterington', 'superviseur');
-insert into actors (first_name, last_name, role)
+/* actors */
+INSERT INTO actors (first_name, last_name, role, birthday)
+values ('Johannes', 'Besset', 'actor', '2008-11-11');
+INSERT INTO actors (first_name, last_name, role, birthday)
+values ('JASON', 'STATAM', 'actor', '2092-01-11');
+INSERT INTO actors (first_name, last_name, role, birthday)
+values ('', 'Setterington', 'superviseur', birthday);
+INSERT INTO actors (first_name, last_name, role, '2008,04, 11')
 values (
       'Forrest',
       'Shera',
       'mannequin'
    );
-insert into actors (first_name, last_name, role)
-values ('Christoph', 'Sleicht', 'actor');
-/*   movies  */
-INSERT INTO Movies (id, nom_du_film, date_de_sortie, description)
+INSERT INTO actors (first_name, last_name, role, birthday)
+values ('Christoph', 'Sleicht', 'actor', '1998, 03,19');
+/* movies */
+INSERT INTO movies (id, title, release_date, description)
 VALUES (
-      Le Seigneur des Anneaux: La Communauté de l ' Anneau ',
-      ' 2001 -12 -19 ',
-      ' Un film épique de fantasy basé sur le roman de J.R.R.Tolkien.'
+      'Le Seigneur des Anneaux: La Communauté de lAnneau ',
+      '2001,12,19',
+      'Un film épique de fantasy basé sur le roman de J.R.R.Tolkien.'
    );
-INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+INSERT INTO movies (title, release_date, description)
 VALUES (
-      ' Forrest Gump ',
-      ' 1994 -07 -06 ',
-      ' L ' histoire extraordinaire d ' un homme simple avec un cœur pur.'
+      'Forrest Gump',
+      '1994 -07 -06',
+      'L histoire extraordinaire d un homme simple avec un cœur pur.'
    );
-INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+INSERT INTO movies (title, release_date, description)
 VALUES (
-      ' Inception ',
-      ' 2010 -07 -16 ',
-      ' Un film de science - fiction réalisé par Christopher Nolan qui explore la manipulation des rêves.'
+      'Inception',
+      '2010,07,16',
+      'Un film de science - fiction réalisé par Christopher Nolan qui explore la manipulation des rêves.'
    );
-INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+INSERT INTO movies (title, release_date, description)
 VALUES (
-      ' La La Land ',
-      ' 2016 -12 -25 ',
-      ' Une comédie musicale romantique mettant en vedette Ryan Gosling et Emma Stone.'
+      'La La Land',
+      '2016 -12 -25',
+      'Une comédie musicale romantique mettant en vedette Ryan Gosling et Emma Stone.'
    );
-INSERT INTO Movies (nom_du_film, date_de_sortie, description)
+INSERT INTO movies (title, release_date, description)
 VALUES (
-      ' Pulp Fiction ',
-      ' 1994 -09 -23 ',
-      ' Un film culte de Quentin Tarantino avec une narration non linéaire et des personnages mémorables.'
+      'Pulp Fiction',
+      '1994,09,23',
+      'Un film culte de Quentin Tarantino avec une narration non linéaire et des personnages mémorables.'
    );
-/*   realisator  */
-insert into realisator (id_realisator, first_name, last_name, role)
-values (1, ' Chaddy ', ' Chaffey ', ' Surveyor ');
-insert into realisator (id_realisator, first_name, last_name, role)
-values (2, ' Alejandro ', ' Warren ', ' Surveyor ');
-insert into realisator (id_realisator, first_name, last_name, role)
+/* realisator */
+INSERT INTO realisator (first_name, last_name, role)
+values (' Chaddy ', ' Chaffey ', ' Surveyor ');
+INSERT INTO realisator (first_name, last_name, role)
+values (' Alejandro ', ' Warren ', ' Surveyor ');
+INSERT INTO realisator (first_name, last_name, role)
 values (
-      3,
-      ' Sarina ',
-      ' Peaddie ',
-      ' Construction Worker '
+      'Sarina',
+      'Peaddie',
+      'realisator'
    );
-insert into realisator (id_realisator, first_name, last_name, role)
-values (4, ' Corbett ', ' Barkus ', ' Architect ');
-insert into realisator (id_realisator, first_name, last_name, role)
-values (5, ' Sher ', ' Signori ', ' Supervisor ');
-/*   archives  */
-insert into archives (id_archives, last_date, new_date)
-values (1, ' 12 / 30 / 2022 ', ' 4 / 19 / 2023 ');
-insert into archives (id_archives, last_date, new_date)
-values (2, ' 12 / 28 / 2022 ', ' 4 / 14 / 2023 ');
-insert into archives (id_archives, last_date, new_date)
-values (3, ' 11 / 10 / 2022 ', ' 6 / 30 / 2023 ');
-insert into archives (id_archives, last_date, new_date)
-values (4, ' 6 / 7 / 2023 ', ' 1 / 26 / 2023 ');
-insert into archives (id_archives, last_date, new_date)
-values (5, ' 7 / 27 / 2023 ', ' 2 / 14 / 2023 ');
-/*   role  */
-insert into role (id_archives, role)
+INSERT INTO realisator (first_name, last_name, role)
+values (' Corbett ', ' Barkus ', ' Architect ');
+INSERT INTO realisator (first_name, last_name, role)
+values (' Sher ', ' Signori ', ' Supervisor ');
+/* archives */
+INSERT INTO archives (last_date, new_date)
+values ('12,30,2022 ', '4,19,2023 ');
+INSERT INTO archives (last_date, new_date)
+values ('12,28,2022 ', '4,14,2023');
+INSERT INTO archives (last_date, new_date)
+values ('11,10,2022', '6,30,2023');
+INSERT INTO archives (last_date, new_date)
+values ('6,7,2023', '1,26,2023');
+INSERT INTO archives (last_date, new_date)
+values ('7,27,2023', '2,14,2023');
+/* role */
+INSERT INTO role (id_archives, role)
 values (1, ' admin ');
-insert into role (id_archives, role)
+INSERT INTO role (id_archives, role)
 values (2, ' Construction Worker ');
-insert into role (id_archives, role)
+INSERT INTO role (id_archives, role)
 values (3, ' Construction Worker ');
-insert into role (id_archives, role)
+INSERT INTO role (id_archives, role)
 values (4, ' Engineer ');
-insert into role (id_archives, role)
+INSERT INTO role (id_archives, role)
 values (5, ' admin ');
-/*   play  */
-insert into play (id_actors, id_movies)
+,
+/* play */
+INSERT INTO play (id_actors, id_movies)
 values (1, 1);
-insert into play (id_actors, id_movies)
+INSERT INTO play (id_actors, id_movies)
 values (2, 2);
-insert into play (id_actors, id_movies)
+INSERT INTO play (id_actors, id_movies)
 values (3, 3);
-insert into play (id_actors, id_movies)
+INSERT INTO play (id_actors, id_movies)
 values (4, 4);
-insert into play (id_actors, id_movies)
+INSERT INTO play (id_actors, id_movies)
 values (5, 5);
-/*   making  */
-insert into making (id_movies, id_realisator)
+/* making */
+INSERT INTO making (id_movies, id_realisator)
 values (1, 1);
-insert into making (id_movies, id_realisator)
+INSERT INTO making (id_movies, id_realisator)
 values (2, 2);
-insert into making (id_movies, id_realisator)
+INSERT INTO making (id_movies, id_realisator)
 values (3, 3);
-insert into making (id_movies, id_realisator)
+INSERT INTO making (id_movies, id_realisator)
 values (4, 4);
-insert into making (id_movies, id_realisator)
+INSERT INTO making (id_movies, id_realisator)
 values (5, 5);
-/*   favorite  */
-insert into favorite (id_movies, iD_users, id_archives)
+/* favorite */
+INSERT INTO favorite (id_movies, iD_users, id_archives)
 values (1, 1, 1);
-insert into favorite (id_movies, iD_users, id_archives)
+INSERT INTO favorite (id_movies, iD_users, id_archives)
 values (2, 2, 2);
-insert into favorite (id_movies, iD_users, id_archives)
+INSERT INTO favorite (id_movies, iD_users, id_archives)
 values (3, 3, 3);
-insert into favorite (id_movies, iD_users, id_archives)
+INSERT INTO favorite (id_movies, iD_users, id_archives)
 values (4, 4, 4);
-insert into favorite (id_movies, iD_users, id_archives)
+INSERT INTO favorite (id_movies, iD_users, id_archives)
 values (5, 5, 5);
